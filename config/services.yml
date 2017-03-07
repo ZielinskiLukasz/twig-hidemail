@@ -1,0 +1,16 @@
+services:
+    app.hidemail.jslink:
+        class:     AppBundle\Twig\HideMailExtension\HideJSLink
+        arguments: ["@translator"]
+
+    app.hidemail.plaintext:
+        class:     AppBundle\Twig\HideMailExtension\HidePlaintext
+
+    app.hidemail.replacetext:
+        class:     AppBundle\Twig\HideMailExtension\HideReplaceText
+
+    app.twig.hidemail_extension:
+        class:     AppBundle\Twig\HideMailExtension\HideMailExtension
+        arguments: ['@app.hidemail.jslink']
+        tags:
+            - { name: twig.extension } 
