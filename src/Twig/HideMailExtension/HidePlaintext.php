@@ -6,8 +6,8 @@ use AppBundle\Twig\HideMailExtension\HideMailInterface;
 
 class HidePlaintext implements HideMailInterface
 {
-        public function hideMail(string $email) : string 
-	{
-                return $email;
-	}
+    public function hideMail(string $email) : string
+    {
+        return $email;
+    }
 }
